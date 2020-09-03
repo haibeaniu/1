@@ -22,3 +22,4 @@ elif a == '4':
     print(num1, ":", num2, "=", divide(num1, num2))
 else:
     print("Something is not ok my dude")
+d
