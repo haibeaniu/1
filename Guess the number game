@@ -1,0 +1,23 @@
+import random
+
+comp = random.randint(0, 10)
+
+player = False
+
+print(comp)
+
+while player == False:
+    print("Pick a number between 0 and 10")
+    player = int(input("Give me number pls: "))
+    if player == comp:
+        print("gj u fuck")
+        break
+    elif player < comp:
+        print("too low")
+    elif player > comp:
+        print("too high")
+    else:
+        print("why are you so dumb")
+
+    player = False
+    comp = random.randint(0,10)
