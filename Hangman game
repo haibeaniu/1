@@ -1,0 +1,40 @@
+from random import randint
+
+#lost of the words to randomize
+words = ["hop", "skip", "jump", "rick", "morty", "picke", "jerry", "snowball"]
+
+comp = words[randint(0, 7)]
+chance = 0
+player = False
+
+#check if randomizer works
+#print(comp)
+
+while chance < 12:
+    while True:
+        letter = input("What letter do you want to guess: ")
+        if len(letter) <= 1:
+            break
+        else:
+            print("too much letters")
+    if letter in comp:
+        print("You guessed the letter: ", letter)
+        guess = input("do you want to guess the word ? yes/no: ")
+        if guess == "yes":
+            print("okay then")
+            answer = input("And, your answer is ?: ")
+            if answer == comp:
+                print("Congrats!!! you won ")
+                break
+            elif answer != comp:
+                print("Not a good answer !!!\nyou lose")
+                break
+        if guess == "no":
+            print("OK than, move along")
+    if letter not in comp:
+        print("No letter like this in chosen word:")
+
+    chance += 1
+
+    if not chance < 12:
+        print("You just hanged the hang man ggs man")
